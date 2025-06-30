@@ -60,12 +60,16 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 
-# 1. Go to frontend folder
-cd frontend
+```
+
+### Frontend (React js)
+```bash
+#1. cd frontend
 
 # 2. Install dependencies
 npm install
 
 # 3. Run development server
 npm start
+```
 
