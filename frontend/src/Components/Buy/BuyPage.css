@@ -1,0 +1,148 @@
+.BuyPageContainer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* Header */
+.BuyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #292b2c;
+    padding: 15px 40px;
+    color: white;
+}
+
+.BuyLogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.BuyHeader nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #cccccc;
+    transition: color 0.3s ease;
+}
+
+.BuyHeader nav a:hover {
+    color: #ffffff;
+}
+
+/* Hero Section */
+.BuyIntro {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(120deg, #6C63FF, #00C49A);
+    color: white;
+}
+
+.BuyIntro h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.BuyIntro p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Property Listings */
+.BuyListings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Property Card */
+.BuyCard {
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.BuyCard:hover {
+    transform: translateY(-5px);
+}
+
+.BuyCard img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.BuyCardInfo {
+    padding: 15px;
+}
+
+.BuyCardInfo h2 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+}
+
+.BuyLocation {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.BuyType {
+    background-color: #f1f1f1;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 8px 0;
+    color: #555;
+}
+
+.BuyPrice {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.BuyBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.BuyBtn:hover {
+    background-color: #4b42cc;
+}
+.BuyCardLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .BuyListings {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .BuyCard {
+        width: 100%;
+    }
+    .BuyLogo{
+        font-size: 0.8rem;
+    }
+
+}

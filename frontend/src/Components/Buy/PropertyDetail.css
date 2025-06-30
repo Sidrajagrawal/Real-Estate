@@ -1,0 +1,55 @@
+.PropertyDetail {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.DetailHeader {
+    background-color: #292b2c;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DetailHeader nav a {
+    margin-left: 20px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.DetailHeader nav a:hover {
+    color: white;
+}
+
+.DetailContainer {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.DetailImage {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.DetailContent {
+    padding: 30px;
+    flex: 1;
+}
+
+.DetailContent h1 {
+    margin-bottom: 15px;
+}
+
+.DetailContent p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
