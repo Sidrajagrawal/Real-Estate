@@ -4,8 +4,10 @@ import BackgroundVideo from '../../assets/BackgroundVideo.webm';
 import './Home.css';
 import Project from './Project';
 import AboutGroup from './AboutGroup';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const navigate = useNavigate();
     const [show, setShow] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
     
@@ -27,6 +29,16 @@ const Home = () => {
             title: 'MATHURA,UTTAR PRADESH',
         },
     ];
+     const handleSellClick = () => {
+        const token = localStorage.getItem('access');
+
+        if (!token) {
+            alert('Please login first to post your property.');
+            navigate('/login');
+        } else {
+            navigate('/sell');
+        }
+    };
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -63,17 +75,15 @@ const Home = () => {
                                     <Link to="/buy">Buy</Link>
                                 </li>
                                 <li className="li-2">
-                                    <Link to="/sell">Sell</Link>
+                                     <div onClick={handleSellClick} className='Sellbtn'>Sell</div>
                                 </li>
                                 <li className="li-3">
                                     <Link to="/login">Login</Link>
                                 </li>
                                 <li className="li-4">
-                                    <Link to="/signup">SignUp</Link>
+                                    <Link to="/login">SignUp</Link>
                                 </li>
-                                <li className="li-5">
-                                    <Link to="/contact">Contact Us</Link>
-                                </li>
+                                
                             </ul>
                         </div>
                         {/* --------Mobile View-------- */}
@@ -87,7 +97,7 @@ const Home = () => {
                                 <Link to="/buy">Buy</Link>
                             </li>
                             <li className="li-2" onClick={()=>setShow(false)}>
-                                <Link to="/sell">Sell</Link>
+                                 <button onClick={handleSellClick}>Sell</button>
                             </li>
                             <li className="li-3" onClick={()=>setShow(false)}>
                                 <Link to="/login">Login</Link>
@@ -114,10 +124,8 @@ const Home = () => {
                         <div className="buttons">
                             <Link to="/buy">
                                 <button className='button-1'>Buy</button>
-                            </Link>
-                            <Link to="/sell">
-                                <button className='button-2'>Sell</button>
-                            </Link>
+                            </Link>  
+                                <button className='button-2' onClick={handleSellClick}>Sell</button>
                         </div>
                     </div>
                 </div>

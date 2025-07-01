@@ -22,14 +22,25 @@
     color: #ffffff;
 }
 
-.BuyHeader nav a {
-    margin-left: 25px;
+.BuyHeader div{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
     text-decoration: none;
     color: #cccccc;
     transition: color 0.3s ease;
 }
-
-.BuyHeader nav a:hover {
+.Sellbtn{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.BuyHeader div a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.BuyHeader div a:hover {
     color: #ffffff;
 }
 
